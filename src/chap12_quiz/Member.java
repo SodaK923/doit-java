@@ -1,5 +1,6 @@
 package chap12_quiz;
 
+
 public class Member implements Comparable<Member> {
     private int memberId;
     private String memberName;
@@ -57,8 +58,14 @@ public class Member implements Comparable<Member> {
         return this.memberId == member.memberId;
     }
 
+//    @Override
+//    public int compareTo(Member member) {
+//        return this.memberId-member.memberId; // 새로 추가한 회원아이디 -
+//    }
+
+    // Q9: 회원 이름 순으로 정렬되도록 수정
     @Override
-    public int compareTo(Member member) {
-        return this.memberId-member.memberId; // 새로 추가한 회원아이디 -
+    public int compareTo(Member o) {
+        return this.memberName.compareTo(o.memberName);
     }
 }

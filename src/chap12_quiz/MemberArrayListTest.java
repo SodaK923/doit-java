@@ -1,5 +1,7 @@
 package chap12_quiz;
 
+import java.util.Collections;
+
 public class MemberArrayListTest {
     public static void main(String[] args) {
         MemberArrayList memberArrayList = new MemberArrayList();
@@ -8,6 +10,7 @@ public class MemberArrayListTest {
         Member memberSon = new Member(1002, "손민국");
         Member memberPark = new Member(1003, "박서훤");
         Member memberHong = new Member(1004, "홍길동");
+        Member memberSoda = new Member(1002, "소다");
 
         memberArrayList.addMember(memberLee);
         memberArrayList.addMember(memberSon);
@@ -18,5 +21,13 @@ public class MemberArrayListTest {
 
         memberArrayList.removeMember(memberHong.getMemberId());
         memberArrayList.showAllMember();
+
+        memberArrayList.insertMember(memberSoda, 2);
+        memberArrayList.showAllMember();
+
+        // Q9 이름순 정렬 확인 코드
+        memberArrayList.sort();
+        memberArrayList.showAllMember();
+
     }
 }
