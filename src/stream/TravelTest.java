@@ -28,10 +28,10 @@ public class TravelTest {
 
         System.out.println("== 20세 이상 고객 명단 정렬하여 출력");
         List<String> names = customerList.stream()
-                .filter(c -> c.getAge() >= 20)
-                .map(TravelCustomer::getName)
-                .sorted()
-                .toList();
+                        .filter(c -> c.getAge() >= 20)
+                                .map(TravelCustomer::getName)
+                                        .sorted()
+                                                .toList();
 
         IntStream.range(0, names.size()) // 0~(size-1) 정수 스트림 생성
                 .forEach(i -> System.out.println((i+1) + ". " + names.get(i)));
